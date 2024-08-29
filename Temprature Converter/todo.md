@@ -1,0 +1,2 @@
+- Convert temperatures between Celsius, Fahrenheit, and Kelvin.
+- Display error messages for invalid inputs.

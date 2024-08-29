@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utFahrenheit-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <input class="user-input" type="text" placeholder="Enter Temprature" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')">
+  <!-- Regular Expression: /[^0-9.-]/g
+  / and /: These slashes are used to start and end the regular expression.
+
+  [^...]: This part is called a "negated character class." It matches any character that isn't inside the brackets. So, [^0-9.-] means "match any character that is not a digit (0-9), a period (.), or a hyphen (-)."
+
+  0-9: This specifies the range of characters that are digits, from 0 to 9.
+
+  .: This allows the period (.) character, which is often used for decimal numbers.
+
+  -: This allows the hyphen (-), which can be used to indicate negative numbers.
+
+  g: The g at the end stands for "global," meaning that the search should find all matches in the string, not just the first one.
+  this.value: Refers to the current value of the input field.
+  replace(/[^0-9.-]/g, ''): This function searches the input value for any character that is not a digit, period, or hyphen (due to the [^0-9.-] part). When it finds such characters, it replaces them with an empty string (''), effectively removing them from the input.
+  Example in Action:
+  If you type abc123.45-, the input will be processed to 123.45-, removing the letters abc.
+  If you type 12.3.4-5, the input will remain the same because all characters are allowed (digits, periods, and a hyphen).
+  -->
+  <button name="Celsius-to-Fahrenheit" class="button-63" role="button">Celsius to Fahrenheit</button>
+  <button name="Celsius-to-Kelvin" class="button-63 button-62" role="button">Celsius to Kelvin</button>
+  <button name="Fahrenheit-to-Celsius" class="button-63" role="button">Fahrenheit to Celsius</button>
+  <button name="Fahrenheit-to-Kelvin" class="button-63 button-62" role="button">Fahrenheit to Kelvin</button>
+  <button name="Kelvin-to-Fahrenheit" class="button-63" role="button">Kelvin to Fahrenheit</button>
+  <button name="Kelvin-to-Celsius" class="button-63 button-62" role="button">Kelvin to Celsius</button>
+  <div>
+    Calculated Temprature: <span id="output"></span>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
